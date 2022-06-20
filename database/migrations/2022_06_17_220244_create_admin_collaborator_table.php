@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('live', function (Blueprint $table) {
-            $table->id();
-            $table->dateTime('date_debut');
-            $table->dateTime('date_fin');
-            $table->string('titre');
-            $table->string('description');
-            $table->timestamps();
+        Schema::create('admin_collaborator', function (Blueprint $table) {
+            $table->integer("collaborator_id");
+            $table->integer("admin_id");
         });
     }
 
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('live');
+        Schema::dropIfExists('admin_collaborator');
     }
 };
