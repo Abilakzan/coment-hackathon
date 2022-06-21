@@ -1,1 +1,9 @@
-<img src="{{asset('/storage/logo.svg')}}" alt="logo" style="height: 20px;">
+<img src="{{asset('/storage/logo.svg')}}" alt="logo">
+<style>
+    img{
+      width: 177px;
+      height: 43px;
+      margin-left: 38px;
+      margin-top: 45px;
+    }
+</style>
