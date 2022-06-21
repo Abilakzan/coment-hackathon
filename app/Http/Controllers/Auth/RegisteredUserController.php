@@ -46,11 +46,10 @@ class RegisteredUserController extends Controller
         ]);
 
         // MEMO: seeder
-        Role::create(['name'=>'superadmin']);
-        Role::create(['name'=>'admin']);
-        Role::create(['name'=>'normal']);
+        // Role::create(['name'=>'superadmin']);
+        // Role::create(['name'=>'admin']);
+        // Role::create(['name'=>'normal']);
         $user->assignRole('normal');
-
 
         event(new Registered($user));
 
