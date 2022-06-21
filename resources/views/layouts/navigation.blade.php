@@ -31,22 +31,20 @@
                     <x-nav-link :href="route('campagne')" :active="request()->routeIs('campagne')">
                         <p>{{ __('Évaluer ma campagne') }}</p>
                     </x-nav-link>
+                    <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
+                    <x-slot name="content">
+                <!-- Authentication -->
+
+                    </x-slot>
                 </div>
             </div>
-
-            <!-- Settings Dropdown
-            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex navigationIcon">
-                <x-nav-link :href="route('calendrier')" :active="request()->routeIs('calendrier')">
-                    <img src="{{asset('/storage/calender.svg')}}" alt="calendar">
-                </x-nav-link>
-                <x-nav-link :href="route('login')" :active="request()->routeIs('login')">
-                <img src="{{asset('/storage/user.svg')}}" alt="account">
-                </x-nav-link>
-                <x-nav-link :href="route('search')" :active="request()->routeIs('search')">
-                    <img src="{{asset('/storage/magnifier.svg')}}" alt="search">
-                </x-nav-link>
-            </div>
-            -->
         </div>
     </div>
 </nav>

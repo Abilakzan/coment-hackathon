@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CollaboratorController;
+use App\Http\Controllers\LiveController;
+use App\Http\Controllers\swipeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,5 +48,21 @@ Route::get('/search', function () {
 Route::get('/campagne', function () {
     return view('campagne');
 })->middleware(['auth'])->name('campagne');
+//Admin routes
+Route::group(['middleware' => ['role:admin']], function () {
+    Route::get('/admin',[AdminController::class,'index'])->middleware(['auth'])->name('admin');
+
+    //CRUD pour les lives
+    Route::resource("lives", LiveController::class);
+    Route::resource("collaborator", CollaboratorController::class);
+
+});
+
+Route::get('/games', function() {
+    return view('games');
+})->middleware(['auth'])->name('games');
+
+Route::get("/gamesswipe", [swipeController::class, 'index'])->middleware(['auth'])->name('gamesswipe');
+Route::get("/postResult", [swipeController::class, 'postResult'])->middleware(['auth'])->name('postResult');
 
 require __DIR__.'/auth.php';
