@@ -10271,3 +10271,115 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+    font-family: "Comfortaa-Light" ;
+    src: url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Comfortaa-Regular" ;
+    src: url(https://fonts.googleapis.com/css2?family=Comfortaa&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Comfortaa-Medium" ;
+    src: url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Comfortaa-SemiBold" ;
+    src: url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Comfortaa-Bold" ;
+    src: url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Signika-Light" ;
+    src: url(https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Signika-Regular" ;
+    src: url(https://fonts.googleapis.com/css2?family=Signika&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Signika-Medium" ;
+    src: url(https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Signika-Semibold" ;
+    src: url(https://fonts.googleapis.com/css2?family=Signika:wght@600&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Signika-Bold" ;
+    src: url(https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-Thin" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-ThinItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-ExtraLight" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-ExtraLightItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-Light" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-LightItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-Regular" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-RegularItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-Medium" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-MediumItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-SemiBold" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-SemiBoldItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-Bold" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-BoldItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-ExtraBold" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-ExtraBoldItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-Black" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap) format('opentype') ;
+  }
+  @font-face {
+    font-family: "Poppins-BlackItalic" ;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap) format('opentype') ;
+  }
