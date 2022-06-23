@@ -4,6 +4,14 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    <div class="menu_track">
+        <div class="check">
+          <img src="{{asset('/storage/round-space-dashboard.svg')}}" alt="logo_dashboard">
+          <p>{{ __('Dashboard') }}</p>
+        </div>
+    </div>
+    <div class="background_Header">
+    </div>
     <div class="background">
         <div class="backgroundWhite">
             <div class="profil">
@@ -59,14 +67,57 @@
   header{
     display: none;
   }
+  .menu_track{
+    position: absolute;
+    width: 373px;
+    height: 71px;
+    left: 30px;
+    top: 130px;
+    background: #FCFBF0;
+    border-radius: 30px 0px 0px 30px;
+  }
+  .menu_track .check{}
+  .menu_track .check img{
+    position: absolute;
+    left: 3.7%;
+    right: 94.58%;
+    top: 15.48%;
+    bottom: 81.98%;
+    width: 25px;
+    height: 25px;
+    margin-left: 31px;
+    margin-top: 14px;
+  }
+  .menu_track .check p{
+    position: absolute;
+    left: 82.82px;
+    top: 16.58px;
+    width: 134.61px;
+    height: 39.84px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: #015C53;
+  }
+  .background_Header{
+    width: 100vw;
+    background: rgb(255, 254, 248);
+    height: 110px;
+  }
   .background{
     background-color: #015C53;
     width: 100vw;
-    height: 100vh;
-    padding-top: 130px;
+    height: 87vh;
+    padding-top: 20px;
   }
   .background .backgroundWhite{
-    background-color: #FFFFFF;
+    background: #FCFBF0;
     margin-left: 370px;
     width: 1026px;
     height: 654px;

@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100 navigationLa">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -13,26 +13,26 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex navigationSite">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        <img src="{{asset('/storage/ic_round-space-dashboard.svg')}}" alt="logo_dashboard">
+                        <img src="{{asset('/storage/round-space-dashboard.svg')}}" alt="logo_dashboard">
                         <p>{{ __('Dashboard') }}</p>
                     </x-nav-link>
                     <x-nav-link :href="route('actualites')" :active="request()->routeIs('actualites')">
-                        <img src="{{asset('/storage/fiber_new_black_24dp1.svg')}}" alt="logo_actualité">
+                        <img src="{{asset('/storage/fiber_new_white_24dp1.svg')}}" alt="logo_actualité">
                         <p>{{ __('Actualités') }}</p>
                     </x-nav-link>
                     <x-nav-link :href="route('formation')" :active="request()->routeIs('formation')">
-                        <img src="{{asset('/storage/ci_notification.svg')}}" alt="logo_formation">
+                        <img src="{{asset('/storage/notification.svg')}}" alt="logo_formation">
                         <p>{{ __('Formation') }}</p>
                     </x-nav-link>
                     <x-nav-link :href="route('live')" :active="request()->routeIs('live')">
-                        <img src="{{asset('/storage/smart_display_black_24dp1.svg')}}" alt="logo_live">
+                        <img src="{{asset('/storage/smart_display_black_24dp.svg')}}" alt="logo_live">
                         <p>{{ __('Live') }}</p>
                     </x-nav-link>
                     <x-nav-link :href="route('campagne')" :active="request()->routeIs('campagne')">
                         <p class="campagne">{{ __('Évaluer ma campagne') }}</p>
                     </x-nav-link>
                     <div class="elementLogOut">
-                        <img src="{{asset('/storage/logup.svg')}}" alt="logo_logout" style="margin-right:0px;">
+                        <img src="{{asset('/storage/logout.svg')}}" alt="logo_logout" style="margin-right:0px;">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown-link :href="route('logout')"
@@ -49,6 +49,11 @@
 </nav>
 
 <style>
+    .logoNav{
+      height: 110px;
+      width: 340px;
+      background: rgb(255, 254, 248) !important;
+    }
     .navigationLa{
       width: 330px;
       height: 100vh;
@@ -64,7 +69,7 @@
       align-items: flex-start;
       align-content: flex-start;
       margin-left: 70px;
-      margin-top: 44px;
+      margin-top: 20px;
     }
     .navigationSite a{
       color: black;
