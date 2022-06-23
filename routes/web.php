@@ -3,7 +3,9 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CollaboratorController;
 use App\Http\Controllers\LiveController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\swipeController;
+use App\Http\Controllers\WorkshopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,6 +65,12 @@ Route::get('/games', function() {
 })->middleware(['auth'])->name('games');
 
 Route::get("/gamesswipe", [swipeController::class, 'index'])->middleware(['auth'])->name('gamesswipe');
+Route::get("/gamesresult", [swipeController::class, 'result'])->middleware(['auth'])->name('gamesresult');
 Route::get("/postResult", [swipeController::class, 'postResult'])->middleware(['auth'])->name('postResult');
 
+Route::get("/workshop", [WorkshopController::class, 'index'])->middleware(['auth'])->name('workshop');
+
+
+// Route::get('/{name}', [ProfilController::class, 'profil'])->middleware(['auth'])->name('profil');
+Route::post('/updateProfil/{name}',[ProfilController::class,'updateProfil'])->middleware(['auth'])->name('updateProfil');
 require __DIR__.'/auth.php';

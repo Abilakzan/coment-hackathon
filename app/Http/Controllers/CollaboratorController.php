@@ -11,11 +11,12 @@ use Illuminate\Support\Facades\Auth;
 class CollaboratorController extends Controller
 {
     public function index() {
+        $tabUser = [];
+        $my_User = User::where('id', Auth::id())->firstOrFail();
         $AllUser = admin_collaborator::where('admin_id',Auth::id())->get();
         foreach ($AllUser as $user){
             $tabUser[] = User::where("id", $user->collaborator_id)->get();
         }
-        dd($tabUser);
-        return view("lives.index", compact("lives"));
+        return view("collaborator", ['collaborator' => $tabUser, 'my_user' => $my_User]);
      }
 }
