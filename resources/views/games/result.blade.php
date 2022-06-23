@@ -1,32 +1,229 @@
 <x-app-layout>
     <x-slot name="header">
-        <p>Quiz Final</p>
+        <!-- <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Formation') }}
+        </h2> -->
     </x-slot>
-    <div class="swipeCardPrincipal">
-       @if ($nboui > 5)
-       Vous faites partie des personnes qui contribuent encore au sexisme en France, mais rien n’est perdu encore, l’objectif
-        de cette auto-évaluation est de vous faire prendre conscience de l’impact de votre communication sexiste. Il est temps de
-        changer dès à présent! Consultez point par point le mode d’emploi afin de mieux comprendre l’importance de véhiculer une
-        communication non sexiste et d’apprendre à vous poser les bonnes questions.
-        @elseif ($nboui > 1 && $nboui < 6)
-        Des progrès s’imposent, mais le sexisme est tellement ancré dans les usages et le langage qu’il est facile de déraper!
-        Analysez attentivement les messages et les images utilisés dans votre communication, puis réenvisagez vos objectifs et
-        vos cibles en vous aidant de l’ensemble du kit de communication non sexiste. Vous allez certainement voir les choses
-        autrement…
 
-        @elseif ($nboui == 1)
-        Votre communication n’est pas exempte de stéréotype de sexe. Courage, le but est proche… Un « OUI » de moins, et votre
-        communication sera progressiste ! Faites un tour dans le document « Check-list: pour aller plus loin » pour voir comment
-        vous auriez pu améliorer votre score et éviter ce OUI si décevant.
-        @elseif($nboui == 0)
-        Bravo ! Vous êtes attentif.ve à l’information que vous véhiculez au travers de votre communication. Non seulement le résultat
-        ne véhicule pas de représentations dégradantes ou stigmatisantes, mais vous contribuez également à promouvoir l’égalité
-        entre les femmes et les hommes dans la société par une communication juste et non sexiste.
-        @endif
-       @endif
+   <div class="background">
+    <div class="backgroundWhite">
+        <div style="display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    padding: 0 50px;
+                    color: #696F79;
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 20px;">
+            @if ($diplome == 'oui')
+                <img class="photo" src="{{asset('/storage/coupe.svg')}}" alt="image de coupe">
+                {{$texteFinal}}
+                <h2 style="margin-top: 64px;">
+                    Félicitation vous avez débloqué la checklist
+                </h2>
+                <button class="profilButton">
+                    <a class="profilButtona">Continuer</a>
+                </button>
+            @else
+                <label style="font-size: 150px">X</label>
+                {{$texteFinal}}
+                <h2 style="margin-top: 64px;">Vous n'avez malheuresement pas obtenu votre diplôme, contactez un administrateur pour pouvoir le repasser</h2>
+            @endif
+        </div>
     </div>
+   </div>
 </x-app-layout>
-
 <style>
+    .photo {
+        width: 200px;
+        height: 200px;
+    }
+    .profilButton{
+    width: 202px;
+    height: 45px;
+    background: #8E00FD;
+    border-radius: 10px;
+    border: transparent;
+    margin-top: 32px;
+  }
+  .profilButtona{
+    width: 97px;
+    height: 27px;
+    margin: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .background{
+    background-color: #015C53;
+    width: 100vw;
+    height: 115vh;
+    padding-top: 130px;
+  }
+  .background .backgroundWhite{
+    background-color: #FFFFFF;
+    margin-left: 370px;
+    width: 1026px;
+    height: 654px;
+    border-radius: 30px;
+  }
+  .content_Link{
+    display: flex;
+    justify-content: space-between;
+}
+.titre{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-left: 40px;
+  }
+  .content_Actus{
+      width: 390px;
+  }
+  .content_Actus span{
+    position: absolute;
+    width: 140px;
+    height: 45px;
+    left: 453px;
+    top: 427px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background: #8E00FD;
+    border-radius: 0px 5px 5px 0px;
+    padding: 9px 33px;
+    border: transparent;
+  }
+
+  .content_Actus img{
+    width: 405px;
+    height: 325px;
+    border-radius: 30px;
+    margin: 0;
+    margin-left: -13px;
+  }
+
+  .content_Actus p{
+    width: 333px;
+    height: 33px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin: 0;
+    margin-top: -23px;
+  }
+
+  .content_Actus a button{
+    width: 202px;
+    height: 45px;
+    background: #8E00FD;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    color: #FFFFFF;
+    text-align: center;
+    margin-left: 150px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: transparent;
+  }
+.lien {
+    width: 61px;
+    height: 38px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #696F79;
+}
+  .fieldback {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 32px;
+  }
+  .textCenter {
+    width: 75%;
+    text-align: center;
+    padding-top: 95px;
+    padding-bottom: 28PX;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    color: #696F79;
+  }
+  .centerElement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 95px;
+  }
+  .centerElement label {
+    margin-bottom: 32px;
+  }
+  .swipeProgressBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .swipeProgressBar progress{
+        width: 60%;
+        appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        height: 12px;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+}
+.swipeProgressBar progress::-webkit-progress-bar{
+    background-color:rgba(1, 92, 83, 0.1);
+    }
+.swipeProgressBar progress::-webkit-progress-value {
+    /* background:linear-gradient(45deg,transparent 33%,hsla(0,0%,0%,.1) 33%, hsla(0,0%,0%,.1) 66%,transparent 66%); */
+    background-color: #8E00FD;
+    background-size: 80px 40px
+    }
+.swipeProgressBar progress::-moz-progress-bar{
+    /* background:linear-gradient(45deg,transparent 33%,hsla(0,0%,0%,.1) 33%, hsla(0,0%,0%,.1) 66%,transparent 66%); */
+    background-color: #8E00FD;
+    background-size:80px 40px
+    }
+
 
 </style>
