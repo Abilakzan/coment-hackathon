@@ -1,4 +1,4 @@
-<img src="{{asset('/storage/logo.svg')}}" alt="logo">
+<img src="{{asset('/storage/logo1.svg')}}" alt="logo">
 <style>
     img{
       width: 177px;

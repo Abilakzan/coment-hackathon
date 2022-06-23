@@ -29,20 +29,19 @@
                         <p>{{ __('Live') }}</p>
                     </x-nav-link>
                     <x-nav-link :href="route('campagne')" :active="request()->routeIs('campagne')">
-                        <p>{{ __('Évaluer ma campagne') }}</p>
+                        <p class="campagne">{{ __('Évaluer ma campagne') }}</p>
                     </x-nav-link>
-                    <form method="POST" action="{{ route('logout') }}">
+                    <div class="elementLogOut">
+                        <img src="{{asset('/storage/logup.svg')}}" alt="logo_logout" style="margin-right:0px;">
+                        <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                <p>{{ __('Log Out') }}</p>
                             </x-dropdown-link>
                         </form>
-                    <x-slot name="content">
-                <!-- Authentication -->
-
-                    </x-slot>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,6 +53,7 @@
       width: 330px;
       height: 100vh;
       float: left;
+      background: #015C53 !important;
     }
     .navigationSite{
       width: 144px;
@@ -87,6 +87,22 @@
       line-height: 30px;
       display: flex;
       align-items: center;
-      color: #015C53;
+      color: #FFFFFF;
+    }
+    .navigationSite .campagne{
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF;
+      width: 211px;
+      padding: 9px;
+      margin-left: -30px;
+    }
+    .elementLogOut{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 145px;
+      margin-top: 190px;
     }
 </style>
