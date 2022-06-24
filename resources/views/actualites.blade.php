@@ -178,6 +178,36 @@
     background: rgb(255, 254, 248);
     height: 110px;
   }
+  .background_Header .image_Pic{
+    position: absolute;
+    width: 184px;
+    height: 54px;
+    left: 1196px;
+    top: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .background_Header .image_Pic img{
+    width: 54px;
+    height: 54px;
+    border-radius: 27px;
+    margin: 0;
+  }
+  .background_Header .image_Pic p{
+    width: 115px;
+    height: 29px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #0E4B42;
+    margin-bottom: 0;
+  }
   .background{
     background-color: #015C53;
     width: 100vw;
