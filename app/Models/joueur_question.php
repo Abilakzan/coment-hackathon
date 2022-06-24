@@ -9,6 +9,5 @@ class joueur_question extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
 
 }

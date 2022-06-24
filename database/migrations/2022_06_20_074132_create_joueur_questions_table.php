@@ -17,6 +17,8 @@ return new class extends Migration
             $table->integer("id_joueur");
             $table->integer("id_question");
             $table->string("reponse")->nullable();
+            $table->float("avancement")->nullable();
+            $table->timestamps();
         });
     }
 
