@@ -15,7 +15,7 @@ class swipeController extends Controller
 
         $allQuestion = Question::all();
         // dd(count($allQuestion));
-        if(JoueurQuestion::where("id_question", 1)->exists()) {
+        if(JoueurQuestion::where("id_question", 1)->where("id_joueur", Auth::id())->exists()) {
             if(JoueurQuestion::where("reponse", "null")->exists()){
                 $getIDActualQuestion = JoueurQuestion::where('reponse', 'null')->firstOrFail();
                 $getActualQuestion = Question::where("id", $getIDActualQuestion->id_question)->firstOrFail();
@@ -57,21 +57,21 @@ class swipeController extends Controller
         de cette auto-évaluation est de vous faire prendre conscience de l’impact de votre communication sexiste. Il est temps de
         changer dès à présent! Consultez point par point le mode d’emploi afin de mieux comprendre l’importance de véhiculer une
         communication non sexiste et d’apprendre à vous poser les bonnes questions.";
-       } else if (count($numberYes) > 1 && count($numberYes) < 6){
+    } else if (count($numberYes) > 1 && count($numberYes) < 6){
         $text = "Des progrès s’imposent, mais le sexisme est tellement ancré dans les usages et le langage qu’il est facile de déraper!
         Analysez attentivement les messages et les images utilisés dans votre communication, puis réenvisagez vos objectifs et
         vos cibles en vous aidant de l’ensemble du kit de communication non sexiste. Vous allez certainement voir les choses
         autrement…";
-       } else if (count($numberYes) == 1) {
+    } else if (count($numberYes) == 1) {
         $text = "Votre communication n’est pas exempte de stéréotype de sexe. Courage, le but est proche… Un « OUI » de moins, et votre
         communication sera progressiste ! Faites un tour dans le document « Check-list: pour aller plus loin » pour voir comment
         vous auriez pu améliorer votre score et éviter ce OUI si décevant.";
-       } else {
+    } else {
         $text = "Bravo ! Vous êtes attentif.ve à l’information que vous véhiculez au travers de votre communication. Non seulement le résultat
         ne véhicule pas de représentations dégradantes ou stigmatisantes, mais vous contribuez également à promouvoir l’égalité
         entre les femmes et les hommes dans la société par une communication juste et non sexiste.";
-       }
-       if(count($numberYes) < 4) {
+    }
+       if(count($numberYes) <= 4) {
         $diplome = 'oui';
        } else {
         $diplome = 'non';
