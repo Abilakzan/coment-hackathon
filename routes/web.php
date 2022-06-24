@@ -69,6 +69,7 @@ Route::get("/gamesresult", [swipeController::class, 'result'])->middleware(['aut
 Route::get("/postResult", [swipeController::class, 'postResult'])->middleware(['auth'])->name('postResult');
 
 Route::get("/workshop", [WorkshopController::class, 'index'])->middleware(['auth'])->name('workshop');
+Route::get("/formation", [swipeController::class, 'formation'])->middleware(['auth'])->name('formation');
 
 
 // Route::get('/{name}', [ProfilController::class, 'profil'])->middleware(['auth'])->name('profil');

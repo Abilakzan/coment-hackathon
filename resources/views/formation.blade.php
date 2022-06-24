@@ -4,16 +4,32 @@
             {{ __('Formation') }}
         </h2> -->
     </x-slot>
-
-   <div class="background">
+    <div class="menu_track">
+        <div class="check">
+          <img src="{{asset('/storage/Grnotification.svg')}}" alt="logo_formation">
+          <p>{{ __('Formation') }}</p>
+        </div>
+    </div>
+    <div class="background_Header">
+    </div>
+    <div class="background">
     <div class="backgroundWhite">
-            <label class="textCenter">Formation pour une communication non sexiste</label>
-            <div class="swipeProgressBar">
-                <progress max="100" value=60></progress>
+            <div class="profil">
+                <div class="profil_pic">
+                    <img src="{{asset('/storage/charlottePP.png')}}" alt="photo de profil">
+                </div>
+                <div class="profil_text">
+                    <h3 class="profilName">Charlotte.A</h3>
+                    <p class="profilCatégorie">Formation pour une communication non sexiste</p>
+                        <div class="swipeProgressBar">
+                            <progress max="100" value={{$value}}></progress>
+                            <p>{{$value}}%</p>
+                        </div>
+                    <button class="profilButton">
+                        <a class="profilButtona">Continuer</a>
+                    </button>
+                </div>
             </div>
-            <button class="profilButton">
-                <a class="profilButtona">Continuer</a>
-            </button>
             <div class="fieldback">
                 <div class="actus">
                     <div class="content_Link">
@@ -28,7 +44,9 @@
                         <div class="titre">Etape 2 : Quiz final</div>
                     </div>
                     <div class="content_Actus">
-                        <img src="{{asset('/storage/image_quiz2.png')}}" alt="picActu">
+                        <a href="http://127.0.0.1:8000/gamesswipe">
+                            <img src="{{asset('/storage/image_quiz2.png')}}" alt="picActu">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -36,14 +54,60 @@
    </div>
 </x-app-layout>
 <style>
+  header{
+    display: none;
+  }
+  .menu_track{
+    position: absolute;
+    width: 373px;
+    height: 71px;
+    left: 30px;
+    top: 267px;
+    background: #FCFBF0;
+    border-radius: 30px 0px 0px 30px;
+  }
+  .menu_track .check{}
+  .menu_track .check img{
+    position: absolute;
+    left: 3.7%;
+    right: 94.58%;
+    top: 15.48%;
+    bottom: 81.98%;
+    width: 25px;
+    height: 25px;
+    margin-left: 31px;
+    margin-top: 14px;
+  }
+  .menu_track .check p{
+    position: absolute;
+    left: 82.82px;
+    top: 16.58px;
+    width: 134.61px;
+    height: 39.84px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: #015C53;
+  }
+  .background_Header{
+    width: 100vw;
+    background: rgb(255, 254, 248);
+    height: 110px;
+  }
   .background{
     background-color: #015C53;
     width: 100vw;
-    height: 115vh;
-    padding-top: 130px;
+    height: 87vh;
+    padding-top: 20px;
   }
   .background .backgroundWhite{
-    background-color: #FFFFFF;
+    background: #FCFBF0;
     margin-left: 370px;
     width: 1026px;
     height: 654px;
@@ -81,8 +145,8 @@
     display: flex;
     align-items: center;
     color: #FFFFFF;
-    background: #8E00FD;
-    border-radius: 0px 5px 5px 0px;
+    background: #F9D915;
+    border-radius: 10px;
     padding: 9px 33px;
     border: transparent;
   }
@@ -113,7 +177,7 @@
   .content_Actus a button{
     width: 202px;
     height: 45px;
-    background: #8E00FD;
+    background: #F9D915;
     border-radius: 10px;
     font-family: 'Poppins';
     font-style: normal;
@@ -170,12 +234,13 @@
   }
   .swipeProgressBar {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     margin-bottom: 32px;
   }
   .swipeProgressBar progress{
-        width: 60%;
+        width: 660px;
         appearance: none;
         -webkit-appearance: none;
         border: none;
@@ -183,25 +248,38 @@
         position: relative;
         border-radius: 12px;
         overflow: hidden;
-}
+    }
 .swipeProgressBar progress::-webkit-progress-bar{
     background-color:rgba(1, 92, 83, 0.1);
     }
 .swipeProgressBar progress::-webkit-progress-value {
     /* background:linear-gradient(45deg,transparent 33%,hsla(0,0%,0%,.1) 33%, hsla(0,0%,0%,.1) 66%,transparent 66%); */
-    background-color: #8E00FD;
+    background-color: #F9D915;
     background-size: 80px 40px
     }
 .swipeProgressBar progress::-moz-progress-bar{
     /* background:linear-gradient(45deg,transparent 33%,hsla(0,0%,0%,.1) 33%, hsla(0,0%,0%,.1) 66%,transparent 66%); */
-    background-color: #8E00FD;
+    background-color: #F9D915;
     background-size:80px 40px
     }
-
+    .swipeProgressBar p{
+        height: 44px;
+        left: 671px;
+        top: 320px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 44px;
+        display: flex;
+        align-items: center;
+        color: #696F79;
+        margin-bottom: -44px;
+    }
 .profilButton {
     width: 202px;
     height: 45px;
-    background: #8E00FD;
+    background: #F9D915;
     border-radius: 10px;
     margin-left: auto;
     border: transparent;
@@ -219,9 +297,85 @@
     line-height: 27px;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
+    color: #0E4B42;
     align-content: center;
     justify-content: center;
     text-decoration: none;
 }
+.background .backgroundWhite .profil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+  }
+  .background .backgroundWhite .profil .profil_pic{}
+  .background .backgroundWhite .profil .profil_pic img{
+    width: 225px;
+    height: 195px;
+    box-shadow: 0px 15px 40px 5px #ededed;
+    border-radius: 30px;
+    margin-left: 63px;
+    margin-top: 34px;
+  }
+  .background .backgroundWhite .profil .profil_text{
+    display: flex;
+    flex-direction: column;
+  }
+  .background .backgroundWhite .profil .profil_text .profilName{
+    width: 290px;
+    height: 43px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #015C53;
+  }
+  .background .backgroundWhite .profil .profil_text .profilCatégorie{
+    width: 456px;
+    height: 29px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #696F79;
+  }
+  .background .backgroundWhite .profil .profil_text .barre_testLongueur{
+    width: 660px;
+    height: 12px;
+    background: linear-gradient(0deg, rgba(1, 92, 83, 0.1), rgba(1, 92, 83, 0.1)), #F5F5F5;
+    border-radius: 30px;
+    margin: 11px;
+  }
+  .background .backgroundWhite .profil .profil_text .profilButton{
+    width: 202px;
+    height: 45px;
+    background: #F9D915;
+    border-radius: 10px;
+    margin-left: auto;
+    border: transparent;
+    margin-right: 0px;
+  }
+  .background .backgroundWhite .profil .profil_text .profilButtona{
+    width: 97px;
+    height: 27px;
+    margin: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #0E4B42;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+  }
 </style>

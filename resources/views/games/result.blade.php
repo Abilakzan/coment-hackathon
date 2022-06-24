@@ -23,7 +23,7 @@
                     Félicitation vous avez débloqué la checklist
                 </h2>
                 <button class="profilButton">
-                    <a class="profilButtona">Continuer</a>
+                    <a class="profilButtona">Télécharger pdf</a>
                 </button>
             @else
                 <label style="font-size: 150px">X</label>
@@ -48,7 +48,7 @@
     margin-top: 32px;
   }
   .profilButtona{
-    width: 97px;
+    width: 124px;
     height: 27px;
     margin: auto;
     font-family: 'Poppins';

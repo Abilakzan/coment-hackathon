@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex navigationSite">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        <img src="{{asset('/storage/round-space-dashboard.svg')}}" alt="logo_dashboard">
+                        <img src="{{asset('/storage/round-dashboard.svg')}}" alt="logo_dashboard">
                         <p>{{ __('Dashboard') }}</p>
                     </x-nav-link>
                     <x-nav-link :href="route('actualites')" :active="request()->routeIs('actualites')">
@@ -100,6 +100,7 @@
       width: 211px;
       padding: 9px;
       margin-left: -30px;
+      border-radius: 10px;
     }
     .elementLogOut{
       display: flex;

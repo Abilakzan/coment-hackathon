@@ -78,5 +78,10 @@ class swipeController extends Controller
        }
         return view("games.result", ['texteFinal' => $text, 'diplome' => $diplome]);
     }
-
+    public function formation() {
+        $valueInitial = 50;
+        $myuser = JoueurQuestion::where('id_joueur', Auth::id())->where('avancement', '!=', 'null')->orderBy('updated_at','DESC')->first();
+        $scorefinal = $myuser->avancement/2 + $valueInitial;
+        return view('formation', ['value' => $scorefinal]);
+    }
 }

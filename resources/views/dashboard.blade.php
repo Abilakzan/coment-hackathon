@@ -16,15 +16,15 @@
         <div class="backgroundWhite">
             <div class="profil">
                 <div class="profil_pic">
-                    <img>
+                    <img src="{{asset('/storage/charlottePP.png')}}" alt="photo de profil">
                 </div>
                 <div class="profil_text">
                     <h3 class="profilName">Charlotte.A</h3>
                     <p class="profilCatégorie">Formation pour une communication non sexiste</p>
-                    <span class="barre_testLongueur"></span>
-                    <!--
-                        Mettre la barre de progression
-                    -->
+                        <div class="swipeProgressBar">
+                            <progress max="100" value=60></progress>
+                            <p>60%</p>
+                        </div>
                     <button class="profilButton">
                         <a class="profilButtona">Continuer</a>
                     </button>
@@ -177,7 +177,7 @@
   .background .backgroundWhite .profil .profil_text .profilButton{
     width: 202px;
     height: 45px;
-    background: #8E00FD;
+    background: #F9D915;
     border-radius: 10px;
     margin-left: auto;
     border: transparent;
@@ -193,7 +193,7 @@
     line-height: 27px;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
+    color: #0E4B42;
     align-content: center;
     justify-content: center;
     text-decoration: none;
@@ -252,8 +252,8 @@
     line-height: 27px;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
-    background: #8E00FD;
+    color: #0E4B42;
+    background: #F9D915;
     border-radius: 0px 5px 5px 0px;
     padding: 9px 33px;
     border: transparent;
@@ -283,7 +283,7 @@
   .background .backgroundWhite .fieldback .actus .content_Actus a button{
     width: 202px;
     height: 45px;
-    background: #8E00FD;
+    background: #F9D915;
     border-radius: 10px;
     font-family: 'Poppins';
     font-style: normal;
@@ -291,7 +291,7 @@
     font-size: 18px;
     line-height: 27px;
     display: flex;
-    color: #FFFFFF;
+    color: #0E4B42;
     text-align: center;
     margin-left: 150px;
     align-items: center;
@@ -348,8 +348,8 @@
     line-height: 27px;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
-    background: #8E00FD;
+    color: #0E4B42;
+    background: #F9D915;
     border-radius: 0px 5px 5px 0px;
     padding: 9px 33px;
     border: transparent;
@@ -379,7 +379,7 @@
   .background .backgroundWhite .fieldback .live .content_live a button{
     width: 202px;
     height: 45px;
-    background: #8E00FD;
+    background: #F9D915;
     border-radius: 10px;
     font-family: 'Poppins';
     font-style: normal;
@@ -387,12 +387,55 @@
     font-size: 18px;
     line-height: 27px;
     display: flex;
-    color: #FFFFFF;
+    color: #0E4B42;
     text-align: center;
     margin-left: 150px;
     align-items: center;
     justify-content: center;
     align-content: center;
     border: transparent;
+  }.swipeProgressBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 32px;
   }
+  .swipeProgressBar progress{
+        width: 660px;
+        appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        height: 12px;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+}
+.swipeProgressBar progress::-webkit-progress-bar{
+    background-color:rgba(1, 92, 83, 0.1);
+    }
+.swipeProgressBar progress::-webkit-progress-value {
+    /* background:linear-gradient(45deg,transparent 33%,hsla(0,0%,0%,.1) 33%, hsla(0,0%,0%,.1) 66%,transparent 66%); */
+    background-color: #F9D915;
+    background-size: 80px 40px
+    }
+.swipeProgressBar progress::-moz-progress-bar{
+    /* background:linear-gradient(45deg,transparent 33%,hsla(0,0%,0%,.1) 33%, hsla(0,0%,0%,.1) 66%,transparent 66%); */
+    background-color: #F9D915;
+    background-size:80px 40px
+    }
+    .swipeProgressBar p{
+        height: 44px;
+        left: 671px;
+        top: 320px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 44px;
+        display: flex;
+        align-items: center;
+        color: #696F79;
+        margin-bottom: -44px;
+    }
 </style>
