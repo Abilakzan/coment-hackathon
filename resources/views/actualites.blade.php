@@ -211,7 +211,7 @@
   .background{
     background-color: #015C53;
     width: 100vw;
-    height: 100vh;
+    height: 88vh;
     padding-top: 20px;
   }
   .background .backgroundWhite{

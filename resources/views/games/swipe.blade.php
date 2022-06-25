@@ -1,9 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
     <div class="menu_track">
-        <div class="check">
-          <img src="{{asset('/storage/new_gr.svg')}}" alt="logo_news">
-          <p>{{ __('Quiz final') }}</p>
+        <div class="check" style="padding-top: 10vh;">
         </div>
     </div>
     <div class="background_Header">
